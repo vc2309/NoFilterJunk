@@ -1,0 +1,4574 @@
+/*@import 'normalize.css';*/
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Quicksand|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Zilla+Slab+Highlight');
+
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.flex-horizental-center {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.flex-horizental-left {
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+.flex-horizental-right {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+.flex-vertical-center {
+  -webkit-align-items: center;
+  align-items: center;
+}
+.flex-vertical-bottom {
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.flex-vertical-top {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+.flex-column-direction {
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.flex-row-direction {
+  flex-direction: row;
+  -webkit-flex-direction: row;
+}
+html,
+body {
+  width: 100%;
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+a {
+  color: #535353;
+  width: auto;
+  text-decoration: none !important;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+input,
+textarea {
+  outline: 0 !important;
+}
+ul {
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  height: inherit;
+}
+h2 {
+  font-size: 28px;
+}
+.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 99.9vh;
+}
+.scrollable > div {
+  height: 100%;
+}
+.no-scroll {
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+.margin-top-header {
+  position: relative;
+  margin-top: 70px;
+}
+.margin-bottom-header {
+  margin-bottom: 4em;
+}
+.page-content-wrapper .page-content {
+  position: relative;
+}
+.hidden {
+  display: none !important;
+}
+.search-icon {
+  opacity: 0.5;
+  filter: opacity(50);
+  vertical-align: top;
+  font-size: 18px;
+}
+.search-icon:hover {
+  opacity: 0.8;
+  filter: opacity(80);
+}
+.coming .wrapper {
+  color: #57bdcb;
+}
+.coming .wrapper h1 {
+  font-size: 72px;
+  font-weight: bold;
+  margin-top: 150px;
+  color: #57bdcb;
+}
+.coming .wrapper h3 {
+  text-align: center;
+}
+.coming .textfield {
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  max-width: 650px;
+  margin: 30px auto;
+}
+.coming .textfield .search-box {
+  color: #000;
+  position: relative;
+  width: 650px;
+  font-size: 20px;
+  border: none;
+}
+.coming .textfield .search-box-cont {
+  height: 300px;
+}
+.coming .btn {
+  max-width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 0;
+  margin: 0 auto 150px;
+}
+.coming .btn a {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+@media (max-width: 550px) {
+  .coming {
+    padding: 10px;
+  }
+  .coming .textfield .search-box {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-content {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .page-content {
+    max-width: none;
+  }
+  .page-content.limit {
+    max-width: 1010px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .tab-control-labels {
+    visibility: hidden;
+  }
+  .page-content {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .page-content {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page-content {
+    width: 300px;
+  }
+}
+/* Most used text styles */
+footer {
+  position: relative;
+  height: 40px;
+  padding-top: 10px;
+}
+footer span {
+  color: #666;
+  margin-left: 15px;
+  font-size: 12px;
+}
+footer nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+footer nav a {
+  position: relative;
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 5px 3%;
+}
+footer nav span {
+  float: right;
+  margin-right: 30px;
+  height: 37px;
+  line-height: 37px;
+}
+footer > a {
+  background: #f6da55;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #333;
+  text-decoration: none;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+footer > span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 420px) {
+  footer nav {
+    display: block;
+  }
+  footer nav a {
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 8px 15px;
+  }
+}
+@media (max-width: 550px) {
+  footer nav {
+    display: block;
+    padding-bottom: 30px;
+  }
+  footer nav a {
+    margin: 20px 0;
+    text-align: center;
+    color: #959595;
+  }
+  footer nav span {
+    display: block;
+    float: none;
+    text-align: center;
+    color: #959595;
+    font-size: 16px;
+  }
+}
+iframe {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 800px;
+  border: 0;
+}
+html body section div h1 {
+  display: block;
+  margin: 150px 0 40px;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 0;
+}
+html body .landing-page section div h1 {
+  color: #fff;
+  letter-spacing: 0;
+}
+#ilWebsite.about .newIL-website-header,
+#ilWebsite.privacy .newIL-website-header,
+#ilWebsite.terms .newIL-website-header {
+  background: white;
+}
+#ilWebsite.about #ilSiteFooter,
+#ilWebsite.privacy #ilSiteFooter,
+#ilWebsite.terms #ilSiteFooter {
+  position: relative;
+}
+.about .newIL-website-right-header ul li a,
+.privacy .newIL-website-right-header ul li a,
+.terms .newIL-website-right-header ul li a {
+  color: #333;
+}
+.about .newIL-header-logo .newIL-title-header,
+.privacy .newIL-header-logo .newIL-title-header,
+.terms .newIL-header-logo .newIL-title-header {
+  color: #333;
+}
+.about .newIL-website-right-header ul li.with-border,
+.privacy .newIL-website-right-header ul li.with-border,
+.terms .newIL-website-right-header ul li.with-border {
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+.newIL-website-header {
+  position: fixed;
+  display: block;
+  top: 0;
+  height: 5em;
+  width: 100%;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0);
+}
+.newIL-website-header .newIL-title-header {
+  color: white;
+}
+.newIL-website-header .newIL-header-content {
+  max-width: none;
+  margin: 0 1em 0 3.90em;
+}
+.newIL-website-right-header {
+  margin-right: 17px;
+  float: right;
+}
+.newIL-website-right-header ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.newIL-website-right-header ul li {
+  display: block;
+  margin: 22px 0 0;
+  float: left;
+}
+.newIL-website-right-header ul li a {
+  display: block;
+  text-decoration: none;
+  margin: 8px 32px;
+  font-size: 15px;
+  color: white;
+}
+.newIL-website-right-header ul li.with-border {
+  border: 1px solid #FFF;
+  margin-left: 32px;
+}
+html a {
+  cursor: pointer;
+}
+body {
+  width: auto;
+  margin: 0;
+}
+body.start {
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 35px;
+}
+::-webkit-input-placeholder {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-weight: 100;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-weight: 100;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-weight: 100;
+}
+:-ms-input-placeholder {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-weight: 100;
+}
+.clear {
+  clear: both;
+}
+.landing-page {
+  height: 100%;
+}
+.landing-page .info-div {
+  margin: 0;
+  padding: 80px 25px;
+  height: 800px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.info-div h3.desktop-h3 {
+  display: block;
+  font-size: 55px;
+}
+.info-div h3.mobile-h3 {
+  display: none;
+}
+.landing-page .mobile-div {
+  display: none;
+  margin: 0;
+  padding: 80px 25px;
+  color: black;
+}
+header {
+  height: 60px;
+}
+footer {
+  position: relative;
+}
+.highlight {
+  background: #faecab;
+  display: inline-block;
+  padding: 2px;
+}
+header > div a {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #f6da55;
+  border-radius: 3px;
+  color: #666;
+  padding: 9px 18px;
+}
+header > div a.inversed {
+  background: #f6da55;
+}
+.landing-page h3.web-h3 {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 70px;
+}
+.landing-page .search-input-container {
+  max-width: 350px;
+  padding: 10px;
+  margin: 10px auto;
+  z-index: 2;
+  background: #FFF;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.landing-page .search-input-container input {
+  width: 300px;
+  outline: none;
+}
+.landing-page .search-input-container a {
+  position: absolute;
+  right: 0;
+  background: #CCC;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+}
+.landing-page .search-input-container img {
+  display: inline-block;
+  width: 30px;
+}
+.landing-page h1 {
+  text-align: center;
+  margin: 20px 0 0;
+  color: black;
+  text-transform: none;
+  font-size: 65px;
+  letter-spacing: 6px;
+}
+.landing-page .landing-content {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  position: relative;
+  padding: 25px 0;
+  background: #57bdcb;
+}
+.landing-page .landing-content .content-filed {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 30px 0 80px;
+}
+.landing-page .landing-content .content-filed a {
+  display: block;
+  margin: 0 auto;
+}
+.landing-page .landing-content h1 {
+  color: #FFF;
+  display: block;
+  text-align: center;
+  text-shadow: 7px 7px 3px #397b84;
+  letter-spacing: 5px;
+  font-size: 90px;
+}
+.landing-page .landing-content h2 {
+  color: #FFF;
+  display: block;
+  text-align: center;
+  text-shadow: 3px 3px 1px #397b84;
+  letter-spacing: 3px;
+  font-weight: 100;
+  font-size: 50px;
+  margin-top: 20px;
+}
+.landing-page .landing-content a {
+  padding: 10px 25px;
+  font-weight: 100;
+  background: #fff;
+  border: none;
+}
+.landing-page .landing-content img {
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+}
+.landing-page .landing-content .mobile-content p {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 30px;
+  line-height: 45px;
+}
+.content-filed a,
+.content-filed .content-filed-placeholder {
+  position: relative;
+  display: block;
+  width: 150px;
+  border: solid 1px black;
+  font-size: 22px;
+  color: black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.content-filed a:hover {
+  background-color: black;
+  color: white;
+}
+.content-filed .content-filed-placeholder {
+  width: 3%;
+  border: none;
+}
+.landing-content .content-filed.small {
+  margin: 0 0 100px;
+}
+.landing-content .content-filed.small > span {
+  border: none;
+  font-size: 14px;
+  color: black;
+  height: 30px;
+  line-height: 30px;
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+}
+.search-page {
+  display: none;
+}
+.search .search-page {
+  display: block;
+}
+#drawing_canvas {
+  position: absolute;
+  margin: auto;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.search-section,
+.tag-section,
+.result-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  transition: 0.25s;
+}
+.result-section {
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.result-section:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(8px);
+}
+.search-section {
+  height: auto;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  flex-direction: row;
+  background-color: #f6da55;
+  padding-top: 30px 0 20px 0;
+}
+.search-section > h1 {
+  width: 15%;
+  height: 55px;
+  line-height: 55px;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  left: 0px;
+  color: #666;
+  font-weight: 100;
+}
+.search-section:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(3.5px);
+}
+.search-section #btn-search {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-right: 25px;
+}
+body.start .search-section .search-history {
+  display: none;
+}
+#btn-search-mode {
+  display: none;
+  position: relative;
+  float: left;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+#btn-search-mode img {
+  display: block;
+  width: 100%;
+}
+#btn-search-mode.active {
+  display: block;
+}
+#btn-search-mode.combine {
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Safari */
+  transform: rotate(45deg);
+}
+.search-section #btn-search img {
+  display: block;
+  width: 100%;
+}
+.tag-section {
+  height: 150px;
+  background-color: #faecab;
+  transition: height .5s;
+  overflow: hidden;
+}
+.tag-section .tag-section-more {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  height: 21px;
+  line-height: 21px;
+  padding-left: 26px;
+  width: 35px;
+  z-index: 1;
+}
+.tag-section.expand .tag-section-more {
+  display: block;
+}
+.tag-section.expand .tag-section-more:after {
+  position: absolute;
+  top: 0;
+  left: 26px;
+  height: 21px;
+  line-height: 21px;
+  content: "less";
+}
+.tag-section.close .tag-section-more:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-image: url("/images/search/sortup.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tag-section .tag-section-more:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 21px;
+  width: 21px;
+  background-image: url("/images/search/sortdown.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tag-section:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(8px);
+}
+.tag-section.close {
+  height: 100px;
+  overflow-y: hidden;
+}
+.tag-section .tag-section-mask.close {
+  display: none;
+}
+.tag-section .tag-section-mask {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #faecab;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
+}
+.tag-section .tag-section-mask img {
+  display: block;
+  position: relative;
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+}
+.search-section .search-tools {
+  position: relative;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.search-section .search-tools img.tool-upload {
+  position: relative;
+  display: block;
+  width: 25px;
+}
+.search-section .search-wrapper {
+  position: relative;
+  height: auto;
+  width: 70%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: solid 1px grey;
+  padding-bottom: 10px;
+}
+.search-section .search-wrapper .search-history {
+  position: relative;
+  float: left;
+  height: auto;
+  width: auto;
+  text-align: center;
+}
+.search-history .search-history-pointer {
+  display: none;
+  position: relative;
+  height: 35px;
+  line-height: 35px;
+  width: 35px;
+  text-align: center;
+}
+.search-history-content {
+  display: none;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  height: auto;
+  max-height: 400px;
+  width: 250px;
+  overflow: auto;
+  z-index: 2;
+  border: solid 2px orangered;
+}
+.search-history-content .search-history-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.search-history-content .search-history-wrapper:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  filter: blur(20px);
+}
+.search-history.active .search-history-content {
+  display: block;
+}
+#history-container .item-content {
+  display: block;
+  position: relative;
+  padding: 5px 10px;
+  margin: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  border-bottom: solid 1px grey;
+}
+#history-container .item-attachment-remove,
+#history-container .item-attachment-plus {
+  display: none;
+}
+.search-section .search-wrapper .search-input-wrapper {
+  position: relative;
+  float: left;
+  line-height: 35px;
+  width: 400px;
+  font-size: 14px;
+  text-align: center;
+  transition: 0.25s;
+  margin-top: 12px;
+  background-color: transparent;
+}
+.search-section .search-wrapper .search-input-wrapper.circle {
+  cursor: pointer;
+  width: 62px;
+  user-modify: read-only;
+}
+.search-section .search-wrapper .search-input-wrapper input {
+  height: 40px;
+  width: 360px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background-color: transparent;
+  padding: 0;
+}
+.search-section .search-wrapper .search-input-wrapper.circle input {
+  display: none;
+}
+.search-section .search-wrapper .search-input-wrapper.circle:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "SEARCH";
+}
+.search-wrapper .search-item {
+  position: relative;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  width: auto;
+  min-width: 50px;
+  padding: 5px 40px;
+  font-size: 18px;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: 50px;
+  margin-top: 10px;
+  text-align: center;
+  color: #666;
+}
+.search-wrapper .search-item span {
+  text-transform: capitalize;
+}
+.search-item a.item-attachment-remove {
+  display: block;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  height: 16px;
+  line-height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: #f6da55;
+  font-family: monospace;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}
+.search-item a.item-attachment-plus {
+  display: block;
+  position: absolute;
+  right: -50px;
+  top: 5px;
+  height: 30px;
+  line-height: 30px;
+  width: 50px;
+  text-align: center;
+}
+.search-section a.search-go {
+  display: block;
+  position: relative;
+  height: 62px;
+  line-height: 62px;
+  width: 165px;
+  background-color: lightgray;
+  text-align: center;
+  border-radius: 30px;
+}
+.search-section a.other-exploratory {
+  opacity: 0;
+  transition: all .25s;
+  text-decoration: none;
+  color: #333;
+  padding: 2px 5px;
+  margin: 20px 5px 5px;
+  display: inline-block;
+}
+#btn-explore-pinterest img {
+  display: block;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+  float: left;
+}
+#btn-explore-youtube img {
+  display: block;
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 10px;
+  float: left;
+}
+.tag-switch {
+  position: absolute;
+  display: block;
+  height: 240px;
+  line-height: 240px;
+  width: 35px;
+  top: 0;
+  text-align: center;
+}
+.tag-switch.left {
+  left: 0;
+}
+.tag-switch.right {
+  right: 0;
+}
+.tag-section .tag-wrapper {
+  position: relative;
+  height: auto;
+  min-height: 150px;
+  width: 70%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.tag-section .tag-wrapper img {
+  display: inline-block;
+  width: 80px;
+  position: relative;
+  top: 20px;
+}
+.tag-wrapper a.tag-item {
+  position: relative;
+  display: block;
+  margin: 0 20px 20px 0;
+  height: 35px;
+  line-height: 35px;
+  width: auto;
+  border-radius: 8px;
+  padding: 5px 40px;
+  color: grey;
+  text-transform: capitalize;
+  background-color: white;
+}
+.tag-wrapper a.tag-item .btn-circle-plus {
+  display: block;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  height: 16px;
+  line-height: 16px;
+  width: 16px;
+  border-radius: 8px;
+  background-color: #faecab;
+  font-family: monospace;
+  color: black;
+  font-weight: bold;
+  /* border: solid 1px white; */
+  font-size: 16px;
+  text-align: center;
+}
+.tag-wrapper a.tag-item .tag-thumbnail {
+  display: none;
+}
+.tag-wrapper a.tag-item.with-thumbnail {
+  padding: 0 10px 0 40px;
+}
+.tag-wrapper a.tag-item.with-thumbnail .tag-thumbnail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 100%;
+}
+.tag-thumbnail .circle-thumbnail {
+  position: relative;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  border: solid 1px orange;
+  background-color: grey;
+}
+.result-section {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+.result-section .external-exploration-section {
+  position: absolute;
+  top: 0;
+  right: -200px;
+  width: 120px;
+  border-left: 1px solid #ccc;
+  padding: 5px 10px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.result-section a.other-exploratory {
+  opacity: 1;
+  display: block;
+  text-decoration: none;
+  color: #666;
+  font-size: 12px;
+  margin: 7px 0;
+}
+.result-section:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(8px);
+}
+.result-section .result-section-toolbar {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  margin-top: 65px;
+  background-color: grey;
+}
+.result-section-toolbar .tools-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.result-section-toolbar .tabs-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 42px;
+  top: -42px;
+  left: 0;
+  overflow: hidden;
+}
+.tabs-wrapper .result-tab {
+  position: relative;
+  display: block;
+  float: left;
+  width: auto;
+  height: 32px;
+  line-height: 32px;
+  padding: 5px 20px;
+  background-color: #dddddd;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  margin-right: 2px;
+}
+.tabs-wrapper .result-tab.active {
+  color: white;
+  background-color: #505050;
+}
+.tools-wrapper .tools-left {
+  position: relative;
+  display: flex;
+  float: left;
+  height: 100%;
+  width: auto;
+  align-items: center;
+}
+.tools-wrapper .tools-right {
+  position: relative;
+  display: flex;
+  float: right;
+  height: 100%;
+  width: auto;
+  align-items: center;
+}
+.tools-left .tools-select {
+  position: relative;
+  display: block;
+  padding-left: 35px;
+  margin-left: 20px;
+  height: 30px;
+  line-height: 30px;
+}
+.tools-left .tools-select:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-image: url("/images/search/checked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tools-right .tools-sorting {
+  position: relative;
+  display: flex;
+  float: right;
+  align-items: center;
+}
+.tools-sorting > a,
+.tools-sorting > div {
+  position: relative;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 15px;
+}
+.tools-right .tools-selectall {
+  position: relative;
+  float: right;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 35px;
+  margin-right: 15px;
+}
+.tools-right .tools-selectall:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-image: url("/images/search/checked-filled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.tools-wrapper .tools-right {
+  position: relative;
+  float: right;
+}
+.result-section article {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 6px;
+}
+.result-section article.hide {
+  display: none;
+}
+article .title {
+  width: 74%;
+  height: 36px;
+  line-height: 36px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+}
+article.full-width .title {
+  width: 100%;
+}
+article .title span {
+  display: block;
+  position: relative;
+  float: left;
+  width: calc(64%);
+  font-size: 24px;
+  padding: 0 13px;
+  box-sizing: border-box;
+  font-weight: bolder;
+}
+article .title a.status-box {
+  display: block;
+  position: relative;
+  float: right;
+  width: 36px;
+  height: 36px;
+  background-image: url("/images/search/checked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+article .title a.status-box.active {
+  background-image: url("/images/search/checked-filled.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+article .main {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 3px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+article .main .thumbnail {
+  position: relative;
+  float: left;
+  width: 26%;
+  height: 100%;
+  overflow: hidden;
+  padding: 3px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+article .main .thumbnail img {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 100%;
+}
+article .main .paragraph {
+  position: relative;
+  float: left;
+  width: 57%;
+  height: 100%;
+  overflow: hidden;
+  padding: 3px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+}
+article.full-width .main .paragraph {
+  width: 100%;
+}
+article .main .paragraph p {
+  display: block;
+  font-size: 12px;
+}
+article .main .content {
+  position: relative;
+  float: right;
+  width: 74%;
+  height: 100%;
+  padding-top: 36px;
+  box-sizing: border-box;
+}
+article.full-width .content {
+  width: 100%;
+  margin-top: 35px;
+}
+.content .article-content {
+  position: relative;
+  max-height: 120px;
+  overflow: hidden;
+  padding: 10px 160px 0 13px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+  line-height: 22px;
+}
+.content .article-tools {
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0 13px;
+  margin-top: 10px;
+}
+.article-tools .article-tools-tool,
+.article-tools .article-tools-save {
+  position: relative;
+  float: left;
+  padding: 6px 8px;
+  margin-right: 20px;
+}
+.article-tools .article-tools-tool {
+  border: solid 2px transparent;
+}
+.article-tools .article-tools-save {
+  position: relative;
+  border-radius: 5px;
+  border: solid 2px #f6da55;
+}
+.content .tag-wrapper {
+  display: none;
+  overflow: hidden;
+  padding: 0 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.content .content-tag {
+  position: relative;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  margin: 2px;
+}
+.tag-wrapper .content-tag .tag-item {
+  margin: 0;
+  border-radius: 5px;
+  padding: 5px;
+  height: auto;
+  line-height: 1em;
+  text-decoration: none;
+}
+.content > p {
+  display: none;
+  margin: 0 5px;
+  max-height: 90%;
+  overflow: hidden;
+  font-size: 14px;
+}
+.content > p.show {
+  display: block;
+}
+.content > p > span {
+  color: #FFF;
+  background: #000;
+}
+.content > span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: solid 1px lightgray;
+  padding: 6px;
+  box-sizing: border-box;
+}
+.content > a {
+  display: flex;
+  position: relative;
+  height: 10%;
+  text-align: left;
+  color: black;
+  font-size: 15px;
+  text-decoration: none;
+  align-items: center;
+  margin: 0 13px 8px 13px;
+  padding-top: 8px;
+  border-top: solid 1px black;
+  font-style: italic;
+}
+.content > a > span {
+  color: darkgrey;
+  font-style: normal;
+}
+@media (max-width: 400px) {
+  .search-section .search-wrapper {
+    width: 100%;
+  }
+  .search-section .search-wrapper .search-input-wrapper {
+    width: 100%;
+  }
+  .search-section .search-wrapper .search-input-wrapper input {
+    width: 85%;
+    margin: auto;
+  }
+  .tag-section .tag-wrapper {
+    padding: 0;
+  }
+  .result-section article {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    min-width: 0px;
+  }
+  article .title {
+    position: relative;
+  }
+  article .main {
+    position: relative;
+    top: 0;
+  }
+  article .main .thumbnail {
+    float: none;
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+  }
+  article .main .content {
+    float: none;
+    width: 100%;
+  }
+  .content > a {
+    position: relative;
+    font-size: 12px;
+  }
+}
+body.overlaying {
+  overflow: hidden;
+}
+body.overlaying .overlay {
+  display: flex;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+.overlay:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.8;
+}
+.overlay .details {
+  position: relative;
+  width: 70%;
+  height: 85%;
+  min-width: 500px;
+  min-height: 568px;
+  background-color: white;
+  opacity: 1;
+  overflow-y: auto;
+}
+.details .details-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.details-wrapper .detail-title {
+  position: relative;
+  width: 100%;
+  max-width: 793px;
+  height: auto;
+  padding: 30px 0 10px;
+  font-size: 30px;
+  box-sizing: border-box;
+  margin: auto;
+  text-align: center;
+}
+.details-wrapper .source-btn a {
+  color: #666;
+  text-decoration: none;
+  display: block;
+  max-width: 793px;
+  margin: 10px auto;
+}
+.save-section a,
+.details-wrapper .source-btn a span {
+  background: #f6da55;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.save-section a {
+  margin-left: 130px;
+  color: #666;
+  text-decoration: none;
+}
+.details-wrapper .detail-thumbnail {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 3px;
+  box-sizing: border-box;
+  max-width: 793px;
+  margin: auto;
+}
+.details-wrapper .detail-thumbnail img {
+  position: relative;
+  width: calc(94%);
+  max-width: 500px;
+  display: block;
+  height: auto;
+}
+.details-wrapper .detail-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 25px 0;
+  font-size: 18px;
+  line-height: 30px;
+  box-sizing: border-box;
+  color: #666;
+  text-align: justify;
+  max-width: 793px;
+  margin: 0 auto;
+}
+.details-wrapper .detail-tags {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 25px 0;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  max-width: 793px;
+  margin: 0 auto;
+}
+.details-wrapper .detail-tags .detail-label {
+  position: relative;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #666;
+  float: left;
+  width: 50px;
+  margin-top: 5px;
+}
+.details-wrapper .detail-tags .content-tag {
+  position: relative;
+  width: auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: solid 2px lightgray;
+  margin: 0 20px 20px 0;
+}
+.content-tag a {
+  text-decoration: none;
+  color: grey;
+}
+@media screen and (max-width: 950px) {
+  .landing-page h1 {
+    font-size: 45px;
+  }
+  .info-div h3.desktop-h3 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .landing-page h1 {
+    font-size: 60px;
+  }
+  .landing-page .info-div h3.mobile-h3 {
+    display: block;
+    font-size: 55px !important;
+    line-height: 65px;
+  }
+  .landing-page .info-div h3.desktop-h3 {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  h3.web-h3 {
+    display: none;
+  }
+  .landing-page .landing-content img {
+    width: 90%;
+  }
+  .landing-page .mobile-div {
+    display: block;
+  }
+  .landing-page .mobile-div h3 {
+    font-size: 55px !important;
+    line-height: 65px;
+  }
+}
+.landing-stage {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+.landing-stage .button-div a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.landing-stage .button-div a:hover {
+  background-color: black;
+  color: white;
+}
+.landing-stage.request-demo {
+  padding: 200px 0;
+}
+.landing-stage.request-demo .wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.landing-stage.request-demo .wrapper p {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+}
+.landing-stage.request-demo .wrapper p a {
+  text-decoration: underline !important;
+}
+.landing-stage.statement {
+  background: #57bdcb;
+  color: #fff;
+  padding: 150px 0;
+}
+.landing-stage.statement .wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 150px;
+}
+.landing-stage.statement .wrapper > h2 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+}
+.landing-stage.statement .wrapper > img {
+  display: block;
+  float: left;
+  max-width: 150px;
+  margin: 40px 20px 40px 0;
+}
+.landing-stage.statement .wrapper > div {
+  width: calc(100% - 250px);
+  margin: 0 auto;
+}
+.landing-stage.statement .wrapper > div > p {
+  display: block;
+  font-size: 28px;
+  font-style: italic;
+}
+.landing-stage.statement .wrapper > div > .landing-icons {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.landing-stage.statement .wrapper > div > .landing-icons figure > img {
+  display: block;
+}
+.landing-stage.statement .wrapper > div > .landing-icons figure figcaption {
+  text-align: center;
+}
+.landing-stage.statement .wrapper > .clear {
+  display: block;
+  clear: both;
+}
+.landing-stage.connection {
+  padding: 200px 0;
+}
+.landing-stage.connection .wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.landing-stage.connection .wrapper > p {
+  display: block;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 25px;
+}
+.landing-stage.benefit {
+  background: #00cdcd;
+  padding: 150px 0;
+}
+.landing-stage.benefit .wrapper {
+  max-width: 1100px;
+  padding: 25px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.landing-stage.benefit .wrapper .benefit-item-column {
+  width: calc(50% - 10px);
+  margin: 5px;
+  float: left;
+}
+.landing-stage.benefit .wrapper .benefit-item-column .benefit-item {
+  width: 100%;
+  margin: 30px 0;
+}
+.landing-stage.benefit .wrapper .benefit-item-column .benefit-item img {
+  display: inline-block;
+  width: 100px;
+  float: left;
+}
+.landing-stage.benefit .wrapper .benefit-item-column .benefit-item p {
+  display: inline-block;
+  float: left;
+  width: calc(100% - 110px);
+  margin: 30px 0 0 10px;
+  font-size: 22px;
+  color: #fff;
+}
+.landing-stage.benefit .wrapper .benefit-item-column .benefit-item p span {
+  color: #ff0000;
+}
+.landing-stage.benefit .wrapper .benefit-item-column .benefit-item .clear {
+  display: block;
+  clear: both;
+}
+.landing-stage.benefit .wrapper .clear {
+  display: block;
+  clear: both;
+}
+.landing-stage.assistance {
+  background: #00cdcd;
+  padding: 150px 0;
+  color: #fff;
+}
+.landing-stage.assistance .wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.landing-stage.assistance .wrapper h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.landing-stage.assistance .offer-item {
+  margin: 30px 0;
+}
+.landing-stage.assistance .offer-item img {
+  display: block;
+  float: left;
+  width: 100px;
+}
+.landing-stage.assistance .offer-item div {
+  width: calc(100% - 200px);
+  margin-left: 30px;
+  margin-top: 20px;
+  float: left;
+}
+.landing-stage.assistance .offer-item div h6 {
+  font-size: 22px;
+  margin: 5px;
+  font-weight: 100;
+}
+.landing-stage.assistance .offer-item div p {
+  font-size: 16px;
+  margin: 5px;
+}
+.landing-stage.assistance .offer-item .clear {
+  display: block;
+  clear: both;
+}
+.landing-stage.stage6 .stage6-content {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  margin-top: 180px;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-overlay,
+.landing-stage.stage6 .stage6-content .stage6-img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  max-height: 700px;
+  overflow: hidden;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-overlay > img,
+.landing-stage.stage6 .stage6-content .stage6-img-container > img {
+  display: block;
+  position: relative;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-overlay {
+  -webkit-opacity: 0.65;
+  -moz-opacity: 0.65;
+  opacity: 0.65;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main > div {
+  position: relative;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  max-width: 300px;
+  margin: 70px auto;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main > div > img {
+  display: block;
+  max-width: 147px;
+  width: 30%;
+  float: left;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main > div > p {
+  display: block;
+  float: left;
+  font-weight: 100;
+  width: 65%;
+  margin-left: 5%;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main > div > span {
+  display: block;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main .main-font-normal {
+  margin: 150px 0;
+  font-size: 32px;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main .main-font-big {
+  font-size: 90px;
+  margin-top: 150px;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main .stage6-button-div {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 160px 0 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main .stage6-button-div a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main .stage6-button-div a:hover {
+  background-color: black;
+  color: white;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main .stage6-button-div a {
+  border: none;
+}
+.landing-stage.stage6 .stage6-content .stage6-content-main > a {
+  display: block;
+  margin: 100px auto 0;
+  padding: 10px 25px;
+  width: 150px;
+  border: none;
+  background: #fff;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.landing-stage.stage5 {
+  padding: 100px 0 70px;
+}
+.landing-stage.stage5 > h2 {
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+}
+.landing-stage.stage5 .contents {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.landing-stage.stage5 .contents .partner-item {
+  float: left;
+  width: 50%;
+}
+.landing-stage.stage5 .contents .partner-item img {
+  display: inline-block;
+  margin: 10px 40px;
+  max-width: 350px;
+}
+.landing-stage.stage4 {
+  padding: 100px 0 70px;
+}
+.landing-stage.stage4 > h2 {
+  display: block;
+  text-align: center;
+  margin: 30px 0;
+}
+.landing-stage.stage4 .contents {
+  max-width: 1100px;
+  margin: 40px auto;
+}
+.landing-stage.stage4 .contents .content-item {
+  width: 25%;
+  float: left;
+}
+.landing-stage.stage4 .contents .content-item h6 {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+}
+.landing-stage.stage4 .contents .content-item img {
+  display: block;
+  width: 40%;
+  margin: 10px auto;
+}
+.landing-stage.stage4 .contents .content-item p {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+}
+.landing-stage.stage3 {
+  padding: 220px 0 170px;
+  background: #ececec;
+}
+.landing-stage.stage3 > p {
+  display: block;
+  max-width: 1100px;
+  font-size: 22px;
+  font-weight: 100;
+  margin: 20px auto 40px;
+}
+.landing-stage.stage3 > p span {
+  display: inline-block;
+  text-decoration: underline;
+}
+.landing-stage.stage3 > a {
+  display: block;
+  margin: 100px auto 0;
+  padding: 10px 25px;
+  width: 150px;
+  border: 1px solid #000;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.landing-stage.stage2 {
+  padding: 220px 0 170px;
+}
+.landing-stage.stage2 .stage2-content {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+.landing-stage.stage2 .stage2-content h2 {
+  display: block;
+  text-align: center;
+}
+.landing-stage.stage2 .stage2-content .technology-content-item {
+  float: left;
+  width: calc(30% - 10px);
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 250px;
+  background: #d3d3d3;
+}
+.landing-stage.stage2 .stage2-content .technology-content-item.nlp {
+  border: 5px solid #f3c414;
+}
+.landing-stage.stage2 .stage2-content .technology-content-item.quality {
+  border: 5px solid #2d6ada;
+}
+.landing-stage.stage2 .stage2-content .technology-content-item.generative {
+  border: 5px solid #00cdcd;
+}
+.landing-stage.stage2 .stage2-content .technology-content-item h5 {
+  display: block;
+  font-weight: 100;
+  font-size: 22px;
+  margin-top: 0;
+}
+.landing-stage.stage1 {
+  padding: 100px 0;
+}
+.landing-stage.stage1 .ai-assistant-icons {
+  max-width: 150px;
+  margin: 20px auto;
+}
+.landing-stage.stage1 .ai-assistant-icons img {
+  display: block;
+  width: 100%;
+}
+.landing-stage.stage1 .ai-assistant-icons span {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+.landing-stage.stage1 .arrow-container {
+  max-width: 700px;
+  width: 60%;
+  margin: 20px auto 40px;
+}
+.landing-stage.stage1 .arrow-container > img {
+  display: block;
+  width: 100%;
+}
+.landing-stage.stage1 .product-description-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.landing-stage.stage1 .product-description-container > div {
+  width: 33%;
+  float: left;
+}
+.landing-stage.stage1 .product-description-container > div > div {
+  background: #e3e3e3;
+  border: 1px solid #333;
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.landing-stage.stage1 .product-description-container > div > div > img {
+  display: block;
+  max-width: 70px;
+  margin: 15px;
+}
+.landing-stage.stage1 .product-description-container > div h6 {
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+}
+.landing-stage.stage1 .product-description-container > div p {
+  text-align: center;
+  display: block;
+  width: 80%;
+  margin: 15px auto;
+  font-size: 14px;
+}
+.landing-stage.stage1 .product-description-container > span {
+  display: block;
+}
+@media screen and (max-width: 1200px) {
+  .landing-stage .stage1-content .stage1-article .stage1-article-main .stage1-article-description {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .landing-stage .stage1-content .stage1-article .stage1-article-main .stage1-article-description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .landing-stage .stage1-content .stage1-article .stage1-article-main .stage1-article-description {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .landing-stage .stage1-content .stage1-article .stage1-article-main .stage1-article-description {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.mobile-content {
+  display: none;
+}
+@media (max-width: 550px) {
+  .landing-stage.stage2 .stage2-content {
+    width: 80%;
+  }
+  .landing-stage.stage2 .stage2-content > p {
+    margin: 100px auto 150px;
+    line-height: 1.5;
+  }
+  .landing-stage.stage3 .stage3-background {
+    width: calc(100% - 70px);
+    margin: 50px auto;
+  }
+  .landing-stage.stage3 .stage3-background .stage3-contents .stage3-content {
+    width: 50%;
+  }
+  .landing-stage.stage3 .stage3-background .stage3-contents .stage3-content .stage3-content-text > span {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .mobile-content {
+    display: block;
+  }
+  .desktop-content {
+    display: none !important;
+  }
+  .landing-stage.statement {
+    font-size: 35px;
+    display: block;
+    width: 100%;
+    margin: 0;
+    line-height: 2;
+  }
+  .landing-stage.statement .wrapper {
+    padding: 0;
+  }
+  .landing-stage.statement .wrapper > div > .landing-icons {
+    display: block;
+  }
+  .landing-stage.statement .wrapper > div > .landing-icons figure {
+    display: block;
+  }
+  .landing-stage.statement .wrapper > div > .landing-icons figure img {
+    display: block;
+    margin: 0 auto;
+  }
+  .landing-stage.statement .wrapper > div > .landing-icons figure figcaption {
+    font-size: 16px;
+  }
+  .landing-stage.statement .wrapper > img {
+    float: none;
+    margin: 0 auto;
+  }
+  .landing-stage.statement .wrapper > div {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .landing-stage.assistance .offer-item {
+    margin: 20px 0;
+  }
+  .landing-stage.assistance .offer-item img {
+    float: none;
+    margin: 0 auto;
+  }
+  .landing-stage.assistance .offer-item div {
+    width: 90%;
+    margin: 40px auto;
+    float: none;
+  }
+  .landing-stage.assistance .offer-item div h6,
+  .landing-stage.assistance .offer-item div p {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .landing-stage.stage2 .stage2-content .technology-content-item {
+    width: 100%;
+  }
+  .landing-stage.benefit .wrapper .benefit-item-column {
+    width: 100%;
+  }
+  .landing-stage.stage6 .stage6-content .stage6-content-main .main-font-big {
+    font-size: 45px;
+    line-height: 1.5;
+    margin-top: 0;
+  }
+  .landing-stage.stage6 .stage6-content {
+    height: auto;
+    min-height: 680px;
+  }
+  .landing-stage.stage6 .stage6-content .stage6-img-container > img {
+    width: auto;
+    height: 100%;
+  }
+  .landing-stage.stage6 .stage6-content .stage6-content-main .main-font-normal {
+    font-size: 22px;
+    margin: 100px auto 50px;
+  }
+  .landing-stage.stage1 .ai-assistant-icons {
+    margin-bottom: 50px;
+  }
+  .landing-stage.stage1 .product-description-container > div {
+    width: 100%;
+    float: none;
+  }
+  .landing-stage.stage1 .product-description-container > div h6 {
+    margin: 30px auto 15px;
+  }
+  .landing-stage.stage1 .product-description-container > div p {
+    margin: 15px auto 30px;
+  }
+  .landing-stage.stage2 .stage2-content > img {
+    width: 100%;
+    float: none;
+  }
+  .landing-stage.stage2 .stage2-content .stage2-caption {
+    width: 100%;
+    float: none;
+  }
+  .landing-stage.stage2 .stage2-content .stage2-caption h5 {
+    margin-left: 0;
+    text-align: center;
+  }
+  .landing-stage.stage3 > p {
+    width: 90%;
+    line-height: 2em;
+  }
+  .landing-stage.stage4 .contents .content-item {
+    float: none;
+    width: 100%;
+  }
+  .landing-stage.stage4 .contents .content-item p {
+    width: 70%;
+    text-align: center;
+    margin: 40px auto;
+  }
+  .landing-stage.stage5 .contents .partner-item {
+    float: none;
+    width: 80%;
+    margin: 50px auto;
+  }
+  .landing-stage.stage5 .contents .partner-item > img {
+    margin: 0;
+    width: 100%;
+  }
+  .landing-stage.stage6 .stage6-content .stage6-content-main > div > p {
+    text-align: left;
+    font-weight: bolder;
+  }
+  .landing-stage.stage6 .stage6-content .stage6-content-main > div > p b {
+    text-decoration: underline;
+  }
+}
+.learn-more-page {
+  padding-top: 60px;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+.learn-more-page .stage {
+  flex: 1 100%;
+}
+.learn-more-page .stage .stage-content {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  flex-flow: row wrap;
+}
+.learn-more-page .stage .stage-content .stage-item {
+  flex: 1 50%;
+  align-content: center;
+}
+.learn-more-page .stage .stage-image {
+  padding: 130px 0;
+}
+.learn-more-page .stage .stage-caption {
+  padding: 70px 0;
+}
+.learn-more-page .stage .stage-image > img,
+.learn-more-page .stage .stage-caption > img {
+  display: block;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.learn-more-page .stage .stage-image .caption-content,
+.learn-more-page .stage .stage-caption .caption-content {
+  padding: 30px;
+}
+.learn-more-page .stage .stage-image .caption-content h5,
+.learn-more-page .stage .stage-caption .caption-content h5 {
+  font-size: 22px;
+  display: block;
+}
+.learn-more-page .stage .stage-image .caption-content p,
+.learn-more-page .stage .stage-caption .caption-content p {
+  display: block;
+  font-size: 16px;
+  font-weight: 100;
+  margin: 5px 0;
+}
+.learn-more-page .stage .stage-image .caption-content > a,
+.learn-more-page .stage .stage-caption .caption-content > a {
+  display: block;
+  margin-top: 80px;
+  padding: 10px 25px;
+  width: 150px;
+  border: 1px solid #000;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.learn-more-page .stage.stage2 .stage-image {
+  background: #f3c414;
+}
+.learn-more-page .stage.stage3 .stage-image {
+  background: #2d6ada;
+}
+.learn-more-page .stage.stage3 .stage-image > img {
+  width: 50%;
+}
+.learn-more-page .stage.stage4 .stage-image {
+  background: #00cdcd;
+}
+@media (max-width: 550px) {
+  .learn-more-page .stage .stage-content {
+    display: block;
+  }
+  .learn-more-page .stage .stage-image,
+  .learn-more-page .stage .stage-caption {
+    float: none;
+    width: 100%;
+  }
+  .learn-more-page .stage .stage-image h5,
+  .learn-more-page .stage .stage-caption h5,
+  .learn-more-page .stage .stage-image p,
+  .learn-more-page .stage .stage-caption p,
+  .learn-more-page .stage .stage-image a,
+  .learn-more-page .stage .stage-caption a {
+    text-align: center;
+    margin: auto;
+    float: none;
+  }
+  .learn-more-page .stage.stage3 .stage-caption .caption-content h5,
+  .learn-more-page .stage.stage3 .stage-caption .caption-content p,
+  .learn-more-page .stage.stage3 .stage-caption .caption-content a {
+    float: none;
+    max-width: none;
+    text-align: center;
+  }
+}
+.newIL-setting-main-panel {
+  padding: 0;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.newIL-setting-main-panel div.input-container {
+  margin: 5px auto;
+}
+.newIL-setting-main-panel div.input-container > a {
+  margin: 20px 10px 0 0;
+}
+.newIL-setting-main-panel span {
+  display: block;
+  font-size: 10px;
+  color: #bfbfbf;
+}
+.newIL-setting-main-panel hr {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 auto 0 0;
+  width: 100%;
+}
+.newIL-setting-report {
+  padding: 20px 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.newIL-setting-report span {
+  margin-bottom: -0.2em;
+}
+.newIL-setting-report hr {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 auto 0 0;
+  width: 100%;
+}
+.newIL-setting-report .newIL-edit-report {
+  display: block;
+  width: 100%;
+}
+.newIL-setting-report .newIL-edit-report a {
+  margin: 10px 0;
+  display: block;
+}
+.newIL-tutorial-content img {
+  display: block;
+  width: 100%;
+}
+article.careers .newIL-setting-infos-panel,
+article.privacy .newIL-setting-infos-panel,
+article.about .newIL-setting-infos-panel,
+article.terms .newIL-setting-infos-panel {
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .article-p,
+article.privacy .newIL-setting-infos-panel .article-p,
+article.about .newIL-setting-infos-panel .article-p,
+article.terms .newIL-setting-infos-panel .article-p {
+  font-size: 18px;
+  color: #3f3b3d;
+  line-height: 32px;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title {
+  position: relative;
+  width: 100%;
+  height: 770px;
+  margin: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-overlay,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-overlay,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-overlay,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > p,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > p,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > p,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > p,
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > span,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > span,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > span,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > span {
+  display: block;
+  position: relative;
+  color: white;
+  font-weight: 100;
+  font-size: 40px;
+  line-height: 66px;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > p,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > p,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > p,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > p {
+  width: 90%;
+  margin: 0 auto;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin: 60px 0 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn a,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn a,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn a,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn a:hover,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn a:hover,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn a:hover,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn a:hover {
+  background-color: black;
+  color: white;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn > a,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn > a,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn > a,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content .newIL-setting-infos-title-btn > a {
+  border: none;
+  font-weight: 100;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title.about,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title.about,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title.about,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title.about {
+  background-image: url('../images/landing/settings/about-thumbnail.jpg');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title.career,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title.career,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title.career,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title.career {
+  background-image: url('../images/landing/settings/career-thumbnail.jpg');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title.legal,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title.legal,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title.legal,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title.legal {
+  background-image: url('../images/landing/settings/term-thumbnail.jpg');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-title.contact,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title.contact,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-title.contact,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-title.contact {
+  background-image: url('../images/landing/settings/contact-thumbnail.jpg');
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100%;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content {
+  position: relative;
+  width: 850px;
+  margin-bottom: 50px;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column {
+  position: relative;
+  width: 434px;
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.left,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.left,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.left,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.left {
+  float: left;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.right,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.right,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.right,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.right {
+  float: right;
+  text-align: left;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full {
+  width: 100%;
+  float: none;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column .main-column-p,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column .main-column-p,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column .main-column-p,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column .main-column-p {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column .main-column-p .main-column-p-title,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column .main-column-p .main-column-p-title,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column .main-column-p .main-column-p-title,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column .main-column-p .main-column-p-title {
+  display: block;
+  position: relative;
+  color: black;
+  font-size: 22px;
+  padding: 0 0 30px 0;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-1,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-1,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-1,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-1 {
+  font-weight: 900;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-2,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-2,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-2,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-title-2 {
+  color: black;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  margin-bottom: 29px;
+  padding: 0 15px 0 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control .control-font,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control .control-font,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control .control-font,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control .control-font {
+  font-size: 15px;
+  color: #938c90;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > a,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > a,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > a,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > a {
+  display: block;
+  position: relative;
+  float: left;
+  height: 100%;
+  padding-left: 30px;
+  font-size: 15px;
+  color: #938c90;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > a:before,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > a:before,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > a:before,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > a:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30px;
+  background-image: url('../images/icons/sort-up.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 50%;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > span,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > span,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > span,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-control > span {
+  display: block;
+  position: relative;
+  float: right;
+  height: 100%;
+  font-size: 15px;
+  color: #938c90;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper .infos-content-main,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper .infos-content-main,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper .infos-content-main,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper .infos-content-main {
+  display: none;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper .normal-content,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper .normal-content,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper .normal-content,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper .normal-content {
+  display: none;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .infos-content-main,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .infos-content-main,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .infos-content-main,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .infos-content-main,
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .normal-content,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .normal-content,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .normal-content,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .normal-content {
+  display: block;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .details-control > a:before,
+article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .details-control > a:before,
+article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .details-control > a:before,
+article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .details-wrapper.open .details-control > a:before {
+  background-image: url('../images/icons/sort-down.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 50%;
+}
+article.careers .newIL-setting-infos-panel .button-div a,
+article.privacy .newIL-setting-infos-panel .button-div a,
+article.about .newIL-setting-infos-panel .button-div a,
+article.terms .newIL-setting-infos-panel .button-div a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+article.careers .newIL-setting-infos-panel .button-div a:hover,
+article.privacy .newIL-setting-infos-panel .button-div a:hover,
+article.about .newIL-setting-infos-panel .button-div a:hover,
+article.terms .newIL-setting-infos-panel .button-div a:hover {
+  background-color: black;
+  color: white;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage,
+article.about .newIL-setting-infos-panel .setting-infos-stage,
+article.terms .newIL-setting-infos-panel .setting-infos-stage {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage {
+  min-height: 770px;
+  height: auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: auto;
+  margin-bottom: 150px;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content.center,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content.center,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content.center,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content.center {
+  text-align: center;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p {
+  display: block;
+  position: relative;
+  font-size: 25px;
+  line-height: 2em;
+  margin: 20px 0 0;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p span.about-span,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p span.about-span,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p span.about-span,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p span.about-span {
+  font-style: italic;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p.paragraph-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p.paragraph-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p.paragraph-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-text-content > p.paragraph-title {
+  margin-top: 150px;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-image-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-image-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-image-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-image-content {
+  display: block;
+  position: relative;
+  width: 80%;
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-image-content > img,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-image-content > img,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-image-content > img,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-image-content > img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-paragraph,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-paragraph,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-paragraph,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-paragraph {
+  display: block;
+  position: relative;
+  font-size: 25px;
+  line-height: 2em;
+  margin: 50px 0 0;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-title {
+  margin: 30px auto;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin: 60px 0 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn a,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn a,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn a,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn a:hover,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn a:hover,
+article.about .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn a:hover,
+article.terms .newIL-setting-infos-panel .setting-infos-stage .infos-stage .stage-passage-content .passage-btn a:hover {
+  background-color: black;
+  color: white;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage {
+  min-height: 770px;
+  height: auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: auto;
+  margin-bottom: 150px;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content.center,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content.center,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content.center,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content.center,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content.center,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content.center,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content.center,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content.center,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content.center,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content.center,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content.center,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content.center {
+  text-align: center;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p {
+  display: block;
+  position: relative;
+  font-size: 25px;
+  line-height: 2em;
+  margin: 20px 0 0;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p span.about-span,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p span.about-span,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p span.about-span,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p span.about-span,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p span.about-span,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p span.about-span,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p span.about-span,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p span.about-span,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p span.about-span,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p span.about-span,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p span.about-span,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p span.about-span {
+  font-style: italic;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p.paragraph-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p.paragraph-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p.paragraph-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > p.paragraph-title,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p.paragraph-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p.paragraph-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p.paragraph-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > p.paragraph-title,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p.paragraph-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p.paragraph-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p.paragraph-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > p.paragraph-title {
+  margin-top: 150px;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-image-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-image-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-image-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-image-content,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-image-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-image-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-image-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-image-content,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-image-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-image-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-image-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-image-content {
+  display: block;
+  position: relative;
+  width: 80%;
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-image-content > img,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-image-content > img,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-image-content > img,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-image-content > img,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-image-content > img,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-image-content > img,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-image-content > img,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-image-content > img,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-image-content > img,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-image-content > img,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-image-content > img,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-image-content > img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content {
+  display: block;
+  position: relative;
+  width: 60%;
+  height: auto;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph {
+  display: block;
+  position: relative;
+  font-size: 25px;
+  line-height: 2em;
+  margin: 50px 0 0;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title {
+  margin: 30px auto;
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin: 60px 0 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn a,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn a,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn a,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn a,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn a,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn a,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn a,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn a,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn a,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn a,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn a,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn a:hover,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn a:hover,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn a:hover,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-btn a:hover,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn a:hover,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn a:hover,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn a:hover,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-btn a:hover,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn a:hover,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn a:hover,
+article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn a:hover,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-btn a:hover {
+  background-color: black;
+  color: white;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3 {
+  margin: 130px 0 0;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4,
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4 {
+  margin: 130px 0;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage {
+  min-height: 500px;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage.stage2 {
+  margin-bottom: 180px;
+}
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content {
+  width: 910px;
+}
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3 {
+  margin-bottom: 40px;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details {
+  padding-bottom: 50px;
+}
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details .details-title-1,
+article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details .details-title-2 {
+  margin-top: 80px;
+}
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4 {
+  display: none;
+}
+article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4.active {
+  display: block;
+}
+@media all and (max-width: 920px) {
+  .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content {
+    width: 434px;
+  }
+  .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-title {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+  }
+  .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.left,
+  .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.right {
+    float: left;
+  }
+  .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full {
+    width: 434px;
+  }
+}
+@media all and (max-width: 515px) {
+  .newIL-setting-infos-panel .newIL-setting-infos-title .infos-title-title {
+    font-size: 12vw !important;
+  }
+}
+@media all and (max-width: 450px) {
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content,
+  article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content,
+  article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content,
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content {
+    width: 100%;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column,
+  article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column,
+  article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column,
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column {
+    width: 100%;
+    float: none;
+  }
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full,
+  article.privacy .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full,
+  article.about .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full,
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.full {
+    width: 100%;
+  }
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-title .infos-title-subtitle,
+  article.privacy .newIL-setting-infos-panel .newIL-setting-infos-title .infos-title-subtitle,
+  article.about .newIL-setting-infos-panel .newIL-setting-infos-title .infos-title-subtitle,
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-title .infos-title-subtitle {
+    text-align: center;
+  }
+}
+@media (max-width: 550px) {
+  article.about .newIL-setting-infos-panel .newIL-setting-infos-title.about {
+    height: 600px;
+  }
+  article.about .newIL-setting-infos-panel .newIL-setting-infos-title .newIL-setting-infos-title-content > span {
+    font-size: 30px;
+    line-height: 1.5;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage2 .stage-image-content {
+    width: 90%;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3,
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4 {
+    margin-top: 30px;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3 .passage-title,
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4 .passage-title {
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 0;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3 .passage-paragraph,
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4 .passage-paragraph {
+    font-size: 22px;
+    text-align: center;
+    line-height: 1.5;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3 .stage-passage-content,
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4 .stage-passage-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage4 .passage-title {
+    margin-top: 50px;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content {
+    width: 90%;
+    margin: 0 auto 150px;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > span {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage,
+  article.privacy .newIL-setting-infos-panel .setting-infos-stage.about-stage,
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+  article.privacy .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+  article.about .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage,
+  article.privacy .newIL-setting-infos-panel .setting-infos-stage.contact-stage,
+  article.about .newIL-setting-infos-panel .setting-infos-stage.contact-stage,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage {
+    min-height: 10px;
+  }
+  article.about .newIL-setting-infos-panel .setting-infos-stage.about-stage.stage3 {
+    margin-top: 30px;
+  }
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-title.legal .newIL-setting-infos-title-content > span,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-title.legal .newIL-setting-infos-title-content > span,
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-title.career .newIL-setting-infos-title-content > span,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-title.career .newIL-setting-infos-title-content > span,
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-title.contact .newIL-setting-infos-title-content > span,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-title.contact .newIL-setting-infos-title-content > span {
+    font-size: 35px;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content {
+    width: 80%;
+    margin: 80px auto;
+  }
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-title,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-title,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-title,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content .passage-title,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content .passage-title,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content .passage-title,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content .passage-title,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content .passage-title,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content .passage-title {
+    font-size: 35px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content .passage-paragraph,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content .passage-paragraph,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content .passage-paragraph,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content .passage-paragraph,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content .passage-paragraph,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content .passage-paragraph,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content > span {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph li,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph li,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph li,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph li,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph li,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph li,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content .passage-paragraph li,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content .passage-paragraph li,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content .passage-paragraph li,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content .passage-paragraph li,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content .passage-paragraph li,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content .passage-paragraph li {
+    margin: 20px 0;
+    display: block;
+  }
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-passage-content .passage-paragraph > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-passage-content .passage-paragraph > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-passage-content .passage-paragraph > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content .passage-paragraph > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.about-stage .stage-text-content .passage-paragraph > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content .passage-paragraph > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.career-stage .stage-text-content .passage-paragraph > span,
+  article.terms .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content .passage-paragraph > span,
+  article.careers .newIL-setting-infos-panel .setting-infos-stage.contact-stage .stage-text-content .passage-paragraph > span {
+    display: block;
+    margin: 10px auto;
+  }
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details .details-control,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details .details-control {
+    height: 34px;
+    border-radius: 10px;
+    border: 1px solid #333;
+  }
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details .details-wrapper .normal-content,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .infos-content-main-details .details-wrapper .normal-content {
+    width: 80%;
+    margin: 0 auto;
+    float: none;
+  }
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column {
+    width: 80%;
+    margin: 0 auto;
+  }
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.left,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.left {
+    float: none;
+  }
+  article.terms .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.right,
+  article.careers .newIL-setting-infos-panel .newIL-setting-infos-wrapper .newIL-setting-infos-content .infos-content-main .main-column.right {
+    float: none;
+  }
+}
+#app .data-pipeline-demo-content-wrapper {
+  position: absolute;
+  left: -9999px;
+}
+#app.extraction-result .data-pipeline-content-wrapper {
+  position: absolute;
+  left: -9999px;
+}
+#app.extraction-result .data-pipeline-demo-content-wrapper {
+  position: relative;
+  left: 0;
+}
+#progress {
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
+  width: 100px;
+  height: 5px;
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 0 0 5px;
+  display: none;
+}
+#progress .bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 5px;
+  background: #666;
+}
+#progress.active {
+  display: block;
+}
+.data-pipeline-content .content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.data-pipeline-content .content-wrapper .url-extract {
+  margin-top: 20px;
+}
+.data-pipeline-content .content-wrapper .url-extract input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+  padding: 15px 20px;
+  border: 1px solid #000;
+}
+.data-pipeline-content .content-wrapper .url-extract .extract-button {
+  float: right;
+  width: 100%;
+}
+.data-pipeline-content .content-wrapper .url-extract .extract-button a {
+  display: block;
+  width: 150px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 50px 0 0;
+  background: #fff;
+  float: right;
+}
+.data-pipeline-content .content-wrapper .url-extract .extract-button.file-extract {
+  position: relative;
+}
+.data-pipeline-content .content-wrapper .url-extract .extract-button.file-extract a {
+  float: left;
+  background: #FFF;
+  display: block;
+  width: 100px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+  background: #fff;
+}
+.data-pipeline-content .content-wrapper .url-extract .extract-button.file-extract input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 100%;
+  height: 100%;
+}
+.data-pipeline-content .content-wrapper .url-extract .clear {
+  clear: both;
+}
+.data-pipeline-content .left,
+.data-pipeline-content .right {
+  width: 50%;
+  float: left;
+}
+.data-pipeline-content.intro .content-wrapper {
+  padding: 160px 0 100px;
+}
+.data-pipeline-content p {
+  font-size: 22px;
+  line-height: 2em;
+  display: block;
+}
+.data-pipeline-content.stage1 {
+  position: relative;
+  height: 800px;
+  padding-top: 10px;
+}
+.data-pipeline-content.stage1 .stage1-title {
+  position: relative;
+  height: 250px;
+  line-height: 350px;
+  width: 100%;
+  text-align: center;
+  font-size: 55px;
+  font-weight: 900;
+}
+.data-pipeline-content.stage1 .stage1-image-container {
+  position: relative;
+  height: 690px;
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.data-pipeline-content.stage1 .stage1-image-container img {
+  position: relative;
+  height: 80%;
+  width: auto;
+}
+.data-pipeline-content.stage2 {
+  position: relative;
+  height: 770px;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.data-pipeline-content.stage2 .stage2-image-container {
+  position: relative;
+  height: 900px;
+  width: 2100px;
+  overflow: hidden;
+}
+.data-pipeline-content.stage2 .stage2-image-container img {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.data-pipeline-content.stage2 .stage2-overlay,
+.data-pipeline-content.stage2 .stage2-content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.data-pipeline-content.stage2 .stage2-overlay {
+  background-color: black;
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.data-pipeline-content.stage2 .stage2-content-container .content-text-group {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 240px;
+}
+.data-pipeline-content.stage2 .stage2-content-container .content-text-group .content-text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-weight: 900;
+}
+.data-pipeline-content.stage2 .stage2-content-container .content-btn-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 160px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.data-pipeline-content.stage2 .stage2-content-container .content-btn-container > a {
+  display: block;
+  position: relative;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  border: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.data-pipeline-content.stage2 .stage2-content-container .content-btn-container > a:hover {
+  background-color: black;
+  color: white;
+}
+.data-pipeline-content.stage4 {
+  position: relative;
+  height: 820px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.data-pipeline-content.stage4 .stage4-title {
+  position: relative;
+  height: 250px;
+  line-height: 350px;
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 900;
+}
+.data-pipeline-content.stage4 .stage4-content-container {
+  position: relative;
+  height: auto;
+  width: 50%;
+  margin: 0 auto;
+}
+.data-pipeline-content.stage4 .stage4-content-container p {
+  font-size: 28px;
+  line-height: 50px;
+}
+.data-pipeline-content.stage4 .stage4-button-container {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  margin: 50px 0 50px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.data-pipeline-content.stage4 .stage4-button-container a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.data-pipeline-content.stage4 .stage4-button-container a:hover {
+  background-color: black;
+  color: white;
+}
+.data-pipeline-content.stage5 {
+  position: relative;
+  height: 770px;
+  overflow: hidden;
+}
+.data-pipeline-content.stage5 .stage5-image-container {
+  position: relative;
+  height: 900px;
+  width: 2100px;
+}
+.data-pipeline-content.stage5 .stage5-image-container img {
+  position: relative;
+  height: 100%;
+  width: auto;
+}
+.data-pipeline-content.stage5 .stage5-overlay,
+.data-pipeline-content.stage5 .stage5-content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.data-pipeline-content.stage5 .stage5-overlay {
+  background-color: black;
+  -webkit-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.data-pipeline-content.stage5 .stage5-content-container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper {
+  position: relative;
+  width: 85%;
+  padding: 100px 0;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content a:hover {
+  background-color: black;
+  color: white;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content.right {
+  margin-top: 100px;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content > div {
+  width: 100%;
+  color: white;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content .left-title {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 100px;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content .left-subtitle {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 100px;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content .left-normal {
+  font-size: 20px;
+  margin-bottom: 30px;
+  max-width: 500px;
+  line-height: 40px;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content > a {
+  display: block;
+  position: relative;
+  width: 240px;
+  color: white;
+  background-color: transparent;
+  margin: 35px;
+  border: solid 1px white ;
+  font-size: 22px;
+  padding: 0;
+  text-align: center;
+  cursor: default;
+}
+.data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content > a:hover {
+  background-color: white;
+  color: black;
+}
+.data-pipeline-content .button-div a {
+  display: block;
+  background-color: white;
+  color: black;
+  font-size: 22px;
+  height: 46px;
+  line-height: 46px;
+  padding: 0 60px;
+  font-weight: bold;
+  border: solid 1px black;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.data-pipeline-content .button-div a:hover {
+  background-color: black;
+  color: white;
+}
+.data-pipeline-content.intro .content-wrapper {
+  max-width: 900px;
+}
+.data-pipeline-content.intro .content-wrapper h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.data-pipeline-content.intro .content-wrapper .content-filed p {
+  font-size: 25px;
+  line-height: 2em;
+  font-weight: 100;
+}
+.data-pipeline-content.intro .content-wrapper .content-filed a {
+  display: block;
+  padding: 5px 20px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 200px;
+  margin: 60px auto 0;
+  transition: all .3s;
+  line-height: 34px;
+}
+.data-pipeline-content.intro .content-wrapper .content-filed a:hover {
+  background: #000;
+  color: #fff;
+}
+.data-pipeline-content.knowledge-lexicon,
+.data-pipeline-content.create-abstract {
+  background: #ebebeb;
+}
+.data-pipeline-content.knowledge-lexicon p,
+.data-pipeline-content.create-abstract p {
+  width: 70%;
+}
+.data-pipeline-content.knowledge-lexicon img,
+.data-pipeline-content.create-abstract img {
+  display: block;
+  margin-left: 100px;
+}
+.data-pipeline-content.key-extraction h1,
+.data-pipeline-content.knowledge-base h1 {
+  margin-left: 100px;
+}
+.data-pipeline-content.key-extraction p,
+.data-pipeline-content.knowledge-base p {
+  margin-left: 100px;
+}
+.data-pipeline-content.key-extraction img,
+.data-pipeline-content.knowledge-base img {
+  width: 70%;
+}
+.data-pipeline-content.demo {
+  background: #ffe95e;
+}
+.data-pipeline-content.demo .tab-control {
+  padding-bottom: 20px;
+}
+.data-pipeline-content.demo .tab-control a {
+  float: left;
+  width: 150px;
+  text-align: center;
+  margin: 0 20px -1px 0;
+  border-bottom: none;
+  border-radius: 0;
+  position: relative;
+  z-index: 0;
+}
+.data-pipeline-content.demo .tab-control a:hover {
+  background: #fff;
+  color: #000;
+  text-decoration: underline;
+}
+.data-pipeline-content.demo .tab-control a.active {
+  z-index: 2;
+}
+.data-pipeline-content.demo .tab {
+  display: none;
+}
+.data-pipeline-content.demo .tab.active {
+  display: block;
+}
+.data-pipeline-content.demo .content-wrapper h1 {
+  text-align: center;
+}
+.data-pipeline-content.demo textarea {
+  display: block;
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+  line-height: 2;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  z-index: 1;
+  position: relative;
+}
+.data-pipeline-content.demo a {
+  display: block;
+  float: right;
+  border-radius: 5px;
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 50px 0 0;
+  background: #fff;
+  line-height: 34px;
+  height: auto;
+  text-align: center;
+  font-size: 18px;
+}
+.data-pipeline-content.demo a:hover {
+  background-color: black;
+  color: white;
+}
+.data-pipeline-content.demo .right {
+  width: calc(50% - 50px);
+}
+.data-pipeline-content.demo .right p {
+  width: 80%;
+}
+.data-pipeline-content.ocr {
+  background: #ebebeb;
+}
+.data-pipeline-content.ocr h1 {
+  display: block;
+  text-align: center;
+}
+.data-pipeline-content.ocr .extract-button-wrapper {
+  width: 380px;
+  margin: 0 auto;
+}
+.data-pipeline-content.ocr .extract-button-wrapper .extract-button {
+  float: left;
+  width: 150px;
+  margin: 10px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.data-pipeline-content.ocr .extract-button-wrapper .extract-button a {
+  display: block;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+.data-pipeline-content.ocr .extract-button-wrapper .extract-button input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.data-pipeline-demo-content-wrapper {
+  padding-top: 170px;
+}
+.data-pipeline-demo-content-wrapper > .left {
+  float: left;
+  width: calc(100% - 350px);
+  padding: 20px;
+  box-sizing: border-box;
+}
+.data-pipeline-demo-content-wrapper > .right {
+  float: left;
+  width: 300px;
+}
+.data-pipeline-demo-content-wrapper.full > .left {
+  width: 100%;
+}
+.data-pipeline-demo-content-wrapper.full > .right {
+  display: none;
+}
+.data-pipeline-demo-content.subhead {
+  border-bottom: 1px solid #ccc;
+}
+.data-pipeline-demo-content.loading .loader-container {
+  display: block;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: 120px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.data-pipeline-demo-content.loading .loader-container > img {
+  display: block;
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+.data-pipeline-demo-content .loader-container {
+  display: none;
+}
+.data-pipeline-demo-content .item {
+  float: left;
+  margin: 5px 20px;
+}
+.data-pipeline-demo-content .item .color {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background: #f6da55;
+}
+.data-pipeline-demo-content .item .label {
+  font-size: 20px;
+  margin-left: 10px;
+  display: inline-block;
+  color: #000;
+  background: #ffe95e;
+}
+.data-pipeline-demo-content .item.special .label {
+  background: none;
+  text-decoration: underline;
+}
+.data-pipeline-demo-content .item.slider {
+  width: 100px;
+  height: 2px;
+}
+.data-pipeline-demo-content .item.slider > span.ui-slider-handle {
+  width: 6px;
+  height: 6px;
+  top: -3px;
+  margin-left: -3px;
+}
+.data-pipeline-demo-content.knowledge-lexicon {
+  padding: 0 40px;
+}
+.data-pipeline-demo-content.knowledge-lexicon figure {
+  margin-left: 0;
+}
+.data-pipeline-demo-content.knowledge-lexicon figure figcaption {
+  font-size: 25px;
+}
+.data-pipeline-demo-content.knowledge-lexicon div.first {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+.data-pipeline-demo-content.knowledge-lexicon div.first a {
+  display: inline-block;
+  margin: 5px 30px;
+}
+.data-pipeline-demo-content.knowledge-lexicon div.first a:first-of-type {
+  margin-left: 0;
+}
+.data-pipeline-demo-content.knowledge-lexicon .tag-area .tag-item {
+  display: inline-block;
+  margin: 10px 40px 10px 0;
+}
+.data-pipeline-demo-content.knowledge-lexicon div.footer a.link {
+  color: #D3D3D3;
+}
+.data-pipeline-demo-content.key-extraction > span {
+  display: inline-block;
+  margin: 15px 5px;
+  font-size: 16px;
+}
+.data-pipeline-demo-content.key-extraction > a {
+  display: inline-block;
+  margin: 5px;
+}
+.data-pipeline-demo-content.key-extraction > a span {
+  padding: 1px 2px;
+}
+.data-pipeline-demo-content.key-extraction > a span.name-entity {
+  background: #ffe95e;
+  text-transform: capitalize;
+}
+.data-pipeline-demo-content.key-extraction > a span.architectural-term {
+  background: #6dcff6;
+  text-transform: capitalize;
+}
+.data-pipeline-demo-content.key-extraction > a span.combined-phrase {
+  text-transform: capitalize;
+  font-size: 16px;
+  border-bottom: 1px solid #535353;
+  padding: 2px;
+}
+.data-pipeline-demo-content.key-extraction .ner-container p {
+  display: block;
+}
+.data-pipeline-demo-content.key-extraction .ner-container p span {
+  display: inline-block;
+  margin: 5px;
+}
+.data-pipeline-demo-content.key-extraction .ner-container p a {
+  display: inline-block;
+  margin: 10px;
+  font-size: 20px;
+  background: #f6da55;
+}
+.data-pipeline-demo-content.key-extraction.stanford > a {
+  margin: 0;
+}
+.data-pipeline-demo-content.key-extraction.stanford > a span.combined-phrase {
+  text-transform: none;
+}
+.data-pipeline-demo-content.key-extraction.stanford > a.with-space {
+  margin: 5px 10px 5px 0;
+}
+.data-pipeline-demo-content.key-extraction.stanford > span {
+  margin: 0;
+  padding: 2px;
+}
+.data-pipeline-demo-content.key-extraction.stanford > span.with-space {
+  margin: 15px 5px 15px 0;
+}
+.data-pipeline-demo-content.key-extraction.stanford > span.with-underline {
+  border-bottom: 1px solid #535353;
+}
+.data-pipeline-demo-content.key-context,
+.data-pipeline-demo-content.key-topics {
+  padding: 10px;
+  margin: 10px 0;
+  background: #f6eab3;
+}
+.data-pipeline-demo-content.key-context span,
+.data-pipeline-demo-content.key-topics span {
+  display: block;
+  font-size: 12px;
+}
+.data-pipeline-demo-content.key-context > span,
+.data-pipeline-demo-content.key-topics > span {
+  width: 100%;
+  margin: 5px;
+}
+.data-pipeline-demo-content.key-context div.topic-item span,
+.data-pipeline-demo-content.key-topics div.topic-item span {
+  color: black;
+  display: inline-block;
+  margin: 5px;
+}
+.data-pipeline-demo-content.key-context div.topic-item p,
+.data-pipeline-demo-content.key-topics div.topic-item p {
+  font-size: 12px;
+  display: block;
+  margin: 10px 5px;
+}
+.data-pipeline-demo-content.key-context div.topic-item {
+  margin: 10px 5px;
+}
+@media (max-width: 550px) {
+  .data-pipeline-content .left,
+  .data-pipeline-content .right {
+    float: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+  .data-pipeline-content.knowledge-lexicon img,
+  .data-pipeline-content.create-abstract img {
+    margin: 0 auto;
+    max-width: 451px;
+    width: 90%;
+  }
+  .data-pipeline-content.key-extraction img,
+  .data-pipeline-content.knowledge-base img {
+    width: 90%;
+    display: block;
+    max-width: 522px;
+    margin: 0 auto;
+  }
+  .data-pipeline-content.key-extraction p,
+  .data-pipeline-content.knowledge-base p {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .data-pipeline-demo-content-wrapper > .right {
+    float: none;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .data-pipeline-demo-content.knowledge-lexicon div.first a {
+    display: block;
+    margin: 5px 0;
+  }
+  .data-pipeline-demo-content.knowledge-lexicon div.first > span {
+    display: none;
+  }
+  .data-pipeline-demo-content-wrapper > .left {
+    width: 100%;
+    float: none;
+  }
+}
+@media (max-width: 550px) {
+  .data-pipeline-content .content-wrapper .url-extract input {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .data-pipeline-content.intro .content-wrapper h1 {
+    display: block;
+    width: 80%;
+    margin: 0 auto 30px;
+  }
+  .data-pipeline-content.intro .content-wrapper .content-filed p {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  .data-pipeline-content.key-extraction p,
+  .data-pipeline-content.knowledge-base p,
+  .data-pipeline-content.key-extraction h1,
+  .data-pipeline-content.knowledge-base h1 {
+    margin: 30px auto;
+    width: 80%;
+    text-align: center;
+    line-height: 1.5;
+  }
+  .data-pipeline-content.knowledge-lexicon .left h1 {
+    text-align: center;
+  }
+  .data-pipeline-content.knowledge-lexicon .left p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .data-pipeline-content.demo .try-demo {
+    width: 80%;
+  }
+  .data-pipeline-content.demo .tab-control a {
+    width: 120px;
+  }
+  .data-pipeline-content.stage1 {
+    height: auto;
+  }
+  .data-pipeline-content.stage1 .stage1-title {
+    font-size: 40px;
+  }
+  .data-pipeline-content.stage4 {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  .data-pipeline-content.stage4 .stage4-title {
+    line-height: 1.5em;
+    margin: 100px auto 80px;
+    height: auto;
+  }
+  .data-pipeline-content.stage4 .stage4-content-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .data-pipeline-content.stage4 .stage4-content-container p {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+  .data-pipeline-content.stage4 .stage4-button-container {
+    margin-top: 50px;
+  }
+  .data-pipeline-content.stage1 .stage1-image-container {
+    height: auto;
+    display: block;
+  }
+  .data-pipeline-content.stage1 .stage1-image-container img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .data-pipeline-content.stage2 {
+    height: auto;
+  }
+  .data-pipeline-content.stage2 .stage2-image-container {
+    height: auto;
+  }
+  .data-pipeline-content.stage2 .stage2-image-container img {
+    width: auto;
+    height: 100%;
+  }
+  .data-pipeline-content.stage2 .stage2-content-container .content-text-group {
+    margin-top: 40%;
+  }
+  .data-pipeline-content.stage2 .stage2-content-container .content-text-group .content-text {
+    font-size: 35px;
+    line-height: 1.5;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .data-pipeline-content.stage2 .stage2-content-container .content-btn-container {
+    margin-top: 80px;
+  }
+  .data-pipeline-content.stage5 {
+    height: auto;
+  }
+  .data-pipeline-content.stage5 .stage5-image-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .data-pipeline-content.stage5 .stage5-content-container {
+    position: relative;
+    display: block;
+  }
+  .data-pipeline-content.stage5 .stage5-content-container .content-wrapper {
+    width: 100%;
+  }
+  .data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content {
+    float: none;
+    width: 80%;
+    padding: 0;
+    margin: 10px auto;
+  }
+  .data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content .left-title {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+  .data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content .left-subtitle {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  .data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content .left-normal {
+    font-size: 18px;
+    text-align: center;
+  }
+  .data-pipeline-content.stage5 .stage5-content-container .content-wrapper .stage5-content > a {
+    margin: 10px auto;
+  }
+}

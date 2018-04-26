@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script type='text/javascript' src='jquery.min.js'></script>
+
+  <script type="text/javascript" src="background.js"></script>
+
+  <!-- <script type='text/javascript' src='main.js'></script> -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="jquery.dropdown.css" />
+<script type="text/javascript" src="jquery.dropdown.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i" rel="stylesheet" />
+	<link rel="stylesheet" href="main_new.css" />
+</head>
+<body>
+<div class="frame">
+<img src="myicon.png"/>
+<div class="coming wrapper">
+<h1>#NoFilter</h1>
+<div class='textfield'>
+<input type="text" class="search-box" id="INPUT_FIELD" placeholder="Enter phrase" />
+</div>
+<button class="coming btn" id="SUBMIT_BLOCK" style="position: absolute;"><a id="SUBMIT_BTN">Submit</a></button>
+<button class="blocked-btn" id="BLOCKED"><a href="#" id="BLOCKED_BTN" data-jq-dropdown="#jq-dropdown-1">Blocked words</a></button>
+</div>
+</div>
+<div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-tip">
+    <ul class="jq-dropdown-menu" id="DROPDOWN_UL">
+    	<li id="NO_WORDS">No words added yet...</li>
+    </ul>
+</div>
+</body>
+</html>
