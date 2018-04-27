@@ -1,8 +1,9 @@
 {
-    "name": "Young",
-    "version": "1.0",
+    "name": "#NoFilter",
+    "version": "2.3",
     "manifest_version": 2,
-    "description": "First extension",   
+    "icons":{"256":"myicon.png"},
+    "description": "Filter your feed",   
     "browser_action": {
         "default_icon": "myicon.png",
         "default_popup": "index.html"

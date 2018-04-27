@@ -12,7 +12,7 @@ var addWord = function(x)
     }
     DD_VALS.push(x);
     chrome.storage.sync.set({"DD_VALS": DD_VALS});
-    $('#DROPDOWN_UL').append("<li>"+x+"</li>");
+    $('#DROPDOWN_UL').append("<li>"+x+"<a><img src='error.png'></a></li>");
 }
 
 $(function(){

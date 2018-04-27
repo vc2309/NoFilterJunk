@@ -46,15 +46,3 @@ chrome.extension.onMessage.addListener(function(msg, sender, sendResponse)
     // },1500);
    
 });
-
-$(function()
-{
-
-      console.log("added");
-      // $('head').append('<script>$("body").click(function(){alert("nips");});</script>');
-    // $('head').append('<script>$(".yo").click(function(){alert(this.id);var id=this.id;obj=$("#"+id);if(obj.hasClass("marked")){obj.show();}});</script>');
-    
-$(".yo").click(function(){alert(this.id);var id=this.id;obj=$('#'+id);if(obj.hasClass("marked")){obj.show();}});
-
-});
-

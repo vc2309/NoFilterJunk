@@ -894,7 +894,7 @@ body.start .search-section .search-history {
 }
 .frame{
   width: 300px;
-  min-height: 450px;
+  min-height: 560px;
   /*max-height: 100%;*/
   font-family: 'Roboto', sans-serif;
     font-weight: 100;
