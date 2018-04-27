@@ -7,18 +7,18 @@ $.expr[":"].contains = $.expr.createPseudo(function(arg) {
 });
 
 function modify(elem){
-  if ($("#script_nf").length>1) {
-    // set=false;
-    $("#script_nf").remove();
-    
-  }
-  $('head').append('<script id="script_nf">$(".yo").click(function(){alert(this.id);var id=this.id;obj=$("#"+id);if(obj.hasClass("marked")){obj.show();}});</script>');
+ 
     id=id+1;
-  $('<p style=color:yellow!important; background color:red!important; font-size:32px!important;>ALERT</p><button id="'+id+'" class="yo">Let me see</button>').insertBefore(elem);
-  
-  
-  $(elem).hide();
-  $(elem).addClass("marked");
+    var hid_p="hid_p"+id;
+    var hid_btn="hid_btn"+id;
+    var hid_p_id="#"+hid_p;
+    var hid_btn_id="#"+hid_btn;
+    $('<p id="'+hid_p+'" style=color:yellow!important; background color:red!important; font-size:32px!important;>ALERT</p><button id="'+hid_btn+'" class="yo">Let me see</button>').insertBefore(elem);
+    $('html').append('<script>$("'+hid_btn_id+'").click(function(){var tid=(this.id).substr(7,);var nid="#marked"+tid;var hid_p="#hid_p"+tid;var hid_btn="#hid_btn"+tid;obj=$(nid);if(obj.hasClass("marked")){obj.show(); $(hid_p).hide(); $(hid_btn).hide();}});</script>');
+    
+    $(elem).hide();
+    $(elem).addClass("marked");
+    $(elem).attr('id',"marked"+id);
 }
 
 chrome.extension.onMessage.addListener(function(msg, sender, sendResponse) 
@@ -26,8 +26,7 @@ chrome.extension.onMessage.addListener(function(msg, sender, sendResponse)
   console.log(msg.action);
   console.log("LOOPING NOW");
   var KEYWORDS=msg.action;
-      setInterval(function(){
-      
+      // setInterval(function(){
       for (t in KEYWORDS)
       {  
         // console.log(KEYWORDS[t]);
@@ -44,7 +43,7 @@ chrome.extension.onMessage.addListener(function(msg, sender, sendResponse)
                   });
                 }
       }
-    },500);
+    // },1500);
    
 });
 
