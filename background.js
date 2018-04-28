@@ -59,7 +59,7 @@ $(function(){
               console.log("background.js");
               console.log(KEYWORDS);        
               chrome.storage.sync.set({"KEYWORD_STORED": KEYWORDS});  //Input word is stored
-              if(DD_VALS.indexOf(KEYWORDS[word]) < 0)
+              if(DD_VALS.indexOf(x) < 0)
               {addWord(x);   //Input word is added to Dropdown
                             DD_VALS.push(x);
                             chrome.storage.sync.set({"DD_VALS": DD_VALS});}
@@ -89,17 +89,51 @@ $(function(){
 
 //REMOVE A WORD FROM LIST
 $('.REMOVE_WORD').click(function(){
-
-  var remID = '#'+($(this).attr("id")).substr(5,);
+  var hashID = ($(this).attr("id")).substr(5,);
+  var remID = '#'+hashID;
   console.log(remID);
   $(remID).remove();
 
-});
+  //Remove word from KEYWORD and DD_VALS and set them
+  var unHashed = unHash(hashID);
+
+  getArr();
+  getDD();
+
+  var idx = DD_VALS.indexOf(unHashed);
+  if (idx > -1) {
+    DD_VALS.splice(idx, 1);
+  }
+  idx = KEYWORDS.indexOf(unHashed);
+  if (idx > -1) {
+    KEYWORDS.splice(idx, 1);
+  }
+
+  setArr();
+  setDD();
+
+  //Revert_mod from main.js
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs){  //Send updated KEYWORD list to main.js
+  chrome.tabs.sendMessage(tabs[0].id, {action: "REMOVE", classID: hashID}, function(response) {});  
+  });
+
 
 });
 
+});
+
 
 });
+
+var setArr = function()
+{
+  chrome.storage.sync.set({"KEYWORD_STORED": KEYWORDS});
+}
+
+var setDD = function()
+{
+  chrome.storage.sync.set({"DD_VALS": DD_VALS});
+}
 
 var getArr = function(){
 chrome.storage.sync.get("KEYWORD_STORED", function(result)  //On page load, get all words which must be blocked
@@ -118,12 +152,31 @@ var getDD = function()
    });
 }
 
+var unHash = function(ID)
+{
+  var hashID='';
+  var temp='';
+  for (char in ID)
+  {
+    if(ID[char]!='_')
+    {
+      temp=temp+ID[char];
+    }
+    else
+    {
+      hashID=hashID+String.fromCharCode(parseInt(temp));
+      temp='';
+    }
+  }
+  return hashID;
+}
+
 var idHash = function(ID)
 {
   var hashID='';
   for (char in ID)
   {
-    hashID=hashID+String(ID.charCodeAt(char));
+    hashID=hashID+String(ID.charCodeAt(char))+'_';
   }
   return hashID;
 }
