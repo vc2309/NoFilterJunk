@@ -12,7 +12,7 @@ var addWord = function(x)
     }
     DD_VALS.push(x);
     chrome.storage.sync.set({"DD_VALS": DD_VALS});
-    $('#DROPDOWN_UL').append("<li>"+x+"<a><img src='error.png'></a></li>");
+    $('#DROPDOWN_UL').append("<li id='"+idHash(x)+"'>"+x+"<a class='REMOVE_WORD' id='cross"+idHash(x)+"'><img src='error.png'></a></li>");
 }
 
 $(function(){
@@ -55,11 +55,14 @@ $(function(){
         else  //Valid input is entered
         {
               KEYWORDS.push(x); //Input word is added to KEYWORD list
-              // addWord(x);   //Input word is added to Dropdown
+             
               console.log("background.js");
               console.log(KEYWORDS);        
               chrome.storage.sync.set({"KEYWORD_STORED": KEYWORDS});  //Input word is stored
-              chrome.storage.sync.set({"DD_VALS": DD_VALS});
+              if(DD_VALS.indexOf(KEYWORDS[word]) < 0)
+              {addWord(x);   //Input word is added to Dropdown
+                            DD_VALS.push(x);
+                            chrome.storage.sync.set({"DD_VALS": DD_VALS});}
               chrome.tabs.query({active: true, currentWindow: true}, function(tabs){  //Send updated KEYWORD list to main.js
                chrome.tabs.sendMessage(tabs[0].id, {action: KEYWORDS}, function(response) {});  
               });
@@ -82,10 +85,18 @@ $(function(){
          addWord(KEYWORDS[word]);
       } 
     }
-    });
+    
 
+//REMOVE A WORD FROM LIST
+$('.REMOVE_WORD').click(function(){
 
+  var remID = '#'+($(this).attr("id")).substr(5,);
+  console.log(remID);
+  $(remID).remove();
 
+});
+
+});
 
 
 });
@@ -107,3 +118,12 @@ var getDD = function()
    });
 }
 
+var idHash = function(ID)
+{
+  var hashID='';
+  for (char in ID)
+  {
+    hashID=hashID+String(ID.charCodeAt(char));
+  }
+  return hashID;
+}
