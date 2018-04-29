@@ -44,27 +44,30 @@ $(function(){
           KEYWORDS=[];
         }
 
-    	 console.log(KEYWORDS);
+    	 console.log(DD_VALS);
       	var x=$("#INPUT_FIELD").val();
         if (x==undefined || (x.trim()).length<2) //Validation test: make sure entered value is valid length
         {
             // alert("Please enter a valid value.");
-            chrome.storage.sync.set({"KEYWORD_STORED": []});
+            // chrome.storage.sync.set({"KEYWORD_STORED": [],"DD_VALS": []});
         }
 
         else  //Valid input is entered
         {
+              console.log(DD_VALS.indexOf(x));
+              if(KEYWORDS.indexOf(x) < 0)
+              {console.log("background.js");
+              console.log(DD_VALS);
               KEYWORDS.push(x); //Input word is added to KEYWORD list
              
-              console.log("background.js");
+              
               console.log(KEYWORDS);        
               chrome.storage.sync.set({"KEYWORD_STORED": KEYWORDS});  //Input word is stored
-              if(DD_VALS.indexOf(x) < 0)
-              {addWord(x);   //Input word is added to Dropdown
+              addWord(x);   //Input word is added to Dropdown
                             DD_VALS.push(x);
                             chrome.storage.sync.set({"DD_VALS": DD_VALS});}
               chrome.tabs.query({active: true, currentWindow: true}, function(tabs){  //Send updated KEYWORD list to main.js
-               chrome.tabs.sendMessage(tabs[0].id, {action: KEYWORDS}, function(response) {});  
+               chrome.tabs.sendMessage(tabs[0].id, {action: DD_VALS}, function(response) {});  
               });
             }
        });
